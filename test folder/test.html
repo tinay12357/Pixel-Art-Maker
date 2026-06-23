@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Art Inquiry 2024</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="testStyle.css">
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-</head>
-
-<body>
-    <div class="heading"><h1>Pixel Art Maker</h1></div>
-    <div class="wrapper column">
-        <ul>
-            <li>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pixel Art Inquiry 2024</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Option Menu -->
+            <div class="options">
                 <div class="opt-wrapper">
-                    <button type = "button" data-toggle = "collapse" 
-                    data-target=".new-drawing-menu">Drawing Menu</button>
-                    <div class="new-drawing-menu collapse">
-                        <div id = "drawing-name">
-                            <label for="picture-title">Picture Title</label>
-                            <input type="text" id="picture-title">
-                        </div>
-                        <div class="grid-size">
-                            <label for ="grid-width"> Grid Width </label>
-                            <input type= "number" id="grid-width">
-                            <span id="width-value">00</span>
-                        </div>
-                        <div class="grid-size">
-                            <label for ="grid-height"> Grid Height </label>
-                            <input type= "number" id="grid-height">
-                            <span id="length-value">00</span>
-                        </div>
-                        <button id="new-canvas-btn">New Drawing</button>
+                    <div class="grid-size">
+                        <label for ="grid-width"> Grid Width </label>
+                        <input type= "number" id="grid-width">
+                        <span id="width-value">00</span>
+                    </div>
+                    <div class="grid-size">
+                        <label for ="grid-height"> Grid Height </label>
+                        <input type= "number" id="grid-height">
+                        <span id="length-value">00</span>
                     </div>
                 </div>
-            </li>
-            <li>
-            <div class="opt-wrapper">
-                <div id="draw-opt">
-                    <label for = "color-input">Color selector</label>
+                <div class="opt-wrapper">
+                    <button id="submit-grid">Create Grid</button>
+                    <button id="clear-grid">Clear Grid</button>
                     <input type="color" id="color-input">
                     <button id="erase-btn">Erase</button>
+                    <button id="paint-btn">Paint</button>
                 </div>
             </div>
-        </li>
-    
-            <li>
-            <div class="palette"><div id="color-selection"></div></div>
-            </li>
-        </ul>
-    </div>
-    <div id="pictures"></div>
-    <div id="canvas-area"></div>
-  <!-- Script section-->
-  <script src="testScript.js"></script>
-</body>
-
-</html>
+        </div>
+        <!-- Script section-->
+        <script src="script.js"></script>
+    </body>
+</html> 

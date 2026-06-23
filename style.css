@@ -1,73 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto Mono", monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
 }
 
-body{
-    background-color:rgb(42, 42, 46);
-}
-.wrapper{
-    background-color: #54566f;
-    width: 80vmin;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top:50%;
-    left: 50%;
-    padding: 40px 20px;
-    border-radius: 8px;
+body {
+  background-color: rgb(42, 42, 46);
+  padding: 10px;
+  gap: 5px;
 }
 
-label{
-    display: block;
+.heading{
+  display: block;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #54566f;
+  color: #fff;
+  margin-bottom: 5px;
+}
+label {
+  display: block;
 }
 
 span {
-    position: relative;
-    font-size: 22px;
-    bottom: -1px;
+  position: relative;
+  font-size: 22px;
+  bottom: -1px;
 }
 
-.opt-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    gap: 10px;
+button {
+  background-color: rgb(54, 49, 84);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-button{
-    background-color: rgb(54, 49, 84);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
+input[type="color"] {
+  appearance: none;
+  background-color: transparent;
+  width: 70px;
+  height: 40px;
+  display: flex;
+  border: none;
+  cursor: pointer;
 }
 
-input[type="color"]{
-    appearance: none;
-    background-color: transparent;
-    width: 70px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
+input[type="color"] {
+  border-radius: 8px;
+  border: 4px solid #000;
 }
 
-input[type="color"]{
-    border-radius: 8px;
-    border: 4px solid #000;
+canvas {
+  background-color: #fff;
+  padding: 20px;
+
 }
 
-.gridCol {
-    height: 1em;
-    width: 1em;
-    border: 1px solid #ddd;
+#canvas-area {
+  background-color: black;
+  margin: 1.5% 1.5% 24px 1.5%;
+  display: block;
+  transform: translateY(10%);
+  top:10%;
+  width: auto;
+  height: auto;
 }
 
-.gridROW{
-    display: flex;
-    border: 1px solid #ddd;
+.under-grid{
+  z-index: -1;
 }
-/* Left at: 10:44*/
+
+.transparent{
+  background-color: transparent;
+}
+
+.hide{
+  display: none;
+}
+
+.pen{
+  height: 10px;
+  width: 10px;
+  border: solid 2px white;
+  border-radius: 2px;
+}
+.palette, .opt-wrapper{
+  display: block;
+  padding: 10px;
+  float: right;
+  background-color: #54566f;
+  border-radius: 5px;
+  margin: 5px 5px 5px 5px;
+}
+#color-selection{
+  justify-content: center;
+  max-width: 120px;
+  overflow-x: auto;
+}
+
+label{
+  color: #fff;
+  font-size: medium;
+}
+
+#draw-opt{
+  background-color:#54566f;
+  padding:10px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.wrapper li {
+  padding: 8px;
+  margin-bottom: 8px;
+}
+.column {
+  float: right;
+  padding: 15px;
+}
+
+.opt-wrapper{
+  max-width: 50vmin;
+}
